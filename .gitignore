@@ -1,0 +1,8 @@
+.env
+*.pkl
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.streamlit/
+confusion_matrix.png

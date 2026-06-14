@@ -1,0 +1,20 @@
+# requirements.txt
+
+# Core
+streamlit>=1.35.0
+pandas>=2.0.0
+psycopg2-binary>=2.9.0
+python-dotenv>=1.0.0
+faker>=25.0.0
+
+# ML — sentiment model
+scikit-learn>=1.4.0
+numpy>=1.24.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# RAG — semantic retrieval
+sentence-transformers>=3.0.0
+
+# LLM — Groq API (hosts open-source Llama 3.1)
+groq>=0.9.0
