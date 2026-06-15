@@ -432,15 +432,3 @@ The `all-MiniLM-L6-v2` model (~80 MB) downloads on the first run and caches loca
 | Environment | python-dotenv |
 
 ---
-
-## Project Improvements Over Baseline
-
-| Original Issue | Fix Applied |
-|---|---|
-| 8 unique sentences across 1,500 rows → model memorises, fake 100% accuracy | 10+ Faker-filled templates per category → every row is genuinely unique |
-| `COMPANY_KNOWLEDGE_BASE.get(category)` — dictionary keyword lookup, not RAG | `RAGEngine.retrieve()` — cosine similarity over sentence embeddings |
-| HuggingFace API for embeddings — silent random vector fallback on failure | Local `sentence-transformers` inference — reliable, fast, no API dependency |
-| No confidence score — only POSITIVE / NEGATIVE label | `predict_proba()` → confidence float 0.0–1.0 displayed as percentage |
-| No model evaluation beyond accuracy | ROC-AUC, 5-fold CV, confusion matrix PNG added |
-| `df` standalone dead code line in `fetch_all_tickets()` | Removed |
-| No live chat interface | Tab 2 added: real-time sentiment + RAG + LLM reply |
